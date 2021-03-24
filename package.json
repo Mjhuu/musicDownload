@@ -1,8 +1,8 @@
 {
-  "name": "hang",
-  "version": "2.1.0",
+  "name": "cloud",
+  "version": "2.1.1",
   "author": "Mjhuu <1441901570@qq.com>",
-  "description": "航哥专属网易云音乐下载器",
+  "description": "云盘下载器",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "postinstall": ""
   },
   "build": {
-    "productName": "航",
+    "productName": "纬领云盘",
     "appId": "com.leon.HelloWorld03",
     "copyright": "Copyright © 2020 Mjhu ",
     "directories": {
@@ -50,7 +50,7 @@
       "target": "nsis"
     },
     "nsis": {
-      "oneClick":false,
+      "oneClick": false,
       "allowToChangeInstallationDirectory": true
     },
     "linux": {
@@ -58,8 +58,9 @@
     }
   },
   "dependencies": {
+    "aes-js": "^3.1.2",
     "ant-design-vue": "^1.5.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "nedb": "^1.8.0",
     "request": "^2.88.2",
     "spark-md5": "^3.0.1",
@@ -95,7 +96,7 @@
     "mini-css-extract-plugin": "0.4.0",
     "multispinner": "^0.2.1",
     "node-loader": "^0.6.0",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.0.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",

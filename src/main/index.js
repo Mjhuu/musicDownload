@@ -54,8 +54,8 @@ function createWindow () {
   const menu = Menu.buildFromTemplate(template);
 
   tray.setContextMenu(menu);
-  tray.setToolTip('航哥专属下载器');
-//监听托盘的双击事件
+  tray.setToolTip('纬领云盘下载器');
+  //监听托盘的双击事件
 
   tray.on('double-click',()=>{
     win.show();

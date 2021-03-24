@@ -7,11 +7,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: require('@/views/home').default
+      component: require('@/views/news').default
     },
     {
       path: '/news',
-      component: require('@/views/news').default
+      component: require('@/views/home').default
+    },
+    {
+      path: '/newWindow',
+      component: require('@/views/newWindow').default
     },
     {
       path: '*',
