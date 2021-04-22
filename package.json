@@ -1,8 +1,8 @@
 {
   "name": "cloud",
-  "version": "2.1.1",
-  "author": "Mjhuu <1441901570@qq.com>",
-  "description": "云盘下载器",
+  "version": "1.0.6",
+  "author": "WEBLINK <1441901570@qq.com>",
+  "description": "纬领云盘下载器",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "build": {
     "productName": "纬领云盘",
     "appId": "com.leon.HelloWorld03",
-    "copyright": "Copyright © 2020 Mjhu ",
+    "copyright": "Copyright © 2021 WEBLINK ",
     "directories": {
       "output": "build"
     },
@@ -51,8 +51,20 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "deleteAppDataOnUninstall": true,
+      "include": "build/urlProtoco.nsh"
     },
+    "protocols": [
+      {
+        "name": "WeblinkCloudProtocol",
+        "schemes": [
+          "WeblinkCloudProtocol"
+        ]
+      }
+    ],
     "linux": {
       "icon": "build/icons"
     }
@@ -61,7 +73,9 @@
     "aes-js": "^3.1.2",
     "ant-design-vue": "^1.5.2",
     "axios": "^0.21.1",
+    "crypto": "^1.0.1",
     "nedb": "^1.8.0",
+    "node-rsa": "^1.1.1",
     "request": "^2.88.2",
     "spark-md5": "^3.0.1",
     "vue": "^2.5.16",

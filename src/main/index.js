@@ -10,8 +10,8 @@ if (process.env.NODE_ENV !== 'development') {
 let tray = null;
 let mainWindow;
 const winURL = process.env.NODE_ENV === 'development'
-  ? `http://localhost:9080`
-  : `file://${__dirname}/index.html`
+  ? `http://localhost:9080/mainPage.html`
+  : `file://${__dirname}/mainPage.html`
 
 function createWindow () {
   /**
@@ -21,8 +21,10 @@ function createWindow () {
     height: 563,
     useContentSize: true,
     width: 1000,
+    minWidth: 900,
+    minHeight: 563,
     backgroundColor: '#2f2f2f',
-    frame: false, // 去掉顶部导航
+    frame: false, // 去掉顶部导航,
   });
 
   mainWindow.loadURL(winURL)

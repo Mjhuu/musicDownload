@@ -10,12 +10,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+// webpack.renderer.config.js
+const { entries, htmlPlugin } = require('./multi-page.config')
 
 let webConfig = {
   devtool: '#cheap-module-eval-source-map',
-  entry: {
-    web: path.join(__dirname, '../src/renderer/main.js')
-  },
+  entry: entries,
   module: {
     rules: [
       {
@@ -83,22 +83,9 @@ let webConfig = {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({filename: 'styles.css'}),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, '../src/index.ejs'),
-      minify: {
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-        removeComments: true
-      },
-      nodeModules: false
-    }),
-    new webpack.DefinePlugin({
-      'process.env.IS_WEB': 'true'
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
-  ],
+  ].concat(htmlPlugin()),
   output: {
     filename: '[name].js',
     path: path.join(__dirname, '../dist/web')

@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66a0e47-5334-4d1f-807b-00c12005e3fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/electron-vue.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.electron-vue/webpack.web.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.electron-vue/webpack.web.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/icons/256x256.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/icons/256x256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/icons/icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/build/icons/icon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ejs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ipcMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ipcMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/App.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/common/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/views/news.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/views/news.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/views/home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/views/newWindow.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/views/news.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +29,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1q8YL9QjipH8csf254pfECvJuRU" />
   <component name="ProjectLevelVcsManager">
@@ -44,15 +57,39 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="F:\webstorm\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\soft\WebStorm 2020.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\jianghu_college\electron_demo\cloud\src" />
+      <recent name="E:\cloud\static" />
+      <recent name="E:\cloud\src\renderer\common" />
+      <recent name="F:\jianghu_college\electron_demo\cloud\test" />
+      <recent name="F:\jianghu_college\electron_demo\cloud\src\renderer\pages\pages2" />
+      <recent name="F:\jianghu_college\electron_demo\cloud\src\renderer\pages\pages1" />
     </key>
+  </component>
+  <component name="RunManager" selected="Node.js.rsa.js">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/index.js" working-dir="$PROJECT_DIR$/test">
+      <method v="2" />
+    </configuration>
+    <configuration name="rsa.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/renderer/common/rsa.js" working-dir="$PROJECT_DIR$/src/renderer/common">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.rsa.js" />
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,11 +101,41 @@
       <updated>1616462625822</updated>
       <workItem from="1616462627087" duration="12472000" />
       <workItem from="1616485508838" duration="2981000" />
-      <workItem from="1616488512113" duration="18899000" />
+      <workItem from="1616488512113" duration="51897000" />
+      <workItem from="1616673069437" duration="91000" />
+      <workItem from="1616718322338" duration="7621000" />
+      <workItem from="1616977737532" duration="61845000" />
+      <workItem from="1617781361873" duration="1770000" />
+      <workItem from="1617848361416" duration="129000" />
+      <workItem from="1617873726078" duration="175000" />
+      <workItem from="1617874064130" duration="1288000" />
+      <workItem from="1618474051475" duration="2399000" />
     </task>
+    <task id="LOCAL-00001" summary="路由模式下的新进程处理数据">
+      <created>1616566979648</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616566979648</updated>
+    </task>
+    <task id="LOCAL-00002" summary="路由模式下的新进程处理数据">
+      <created>1616566992331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616566992331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.nsh" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="路由模式下的新进程处理数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="路由模式下的新进程处理数据" />
   </component>
 </project>
