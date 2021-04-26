@@ -169,6 +169,7 @@ import fs from "fs";
 import request from "request";
 import {RSAUtil} from "../../../../common/rsa";
 import {isBase64, trim} from "../../../../common";
+import {BASE_URL} from '../../../../../Api'
 
 // 默认的文件保存路径
 let defaultSavaPath = path.dirname(remote.app.getPath('exe'));
@@ -196,7 +197,9 @@ export default {
       tabValue: 'downloading',
 
       // 密钥对
-      keypair: RSAUtil.getRSAKeyPair()
+      keypair: RSAUtil.getRSAKeyPair(),
+      // 实时监听剪切板事件
+      clipboardTimer: null
     }
   },
   mounted() {
@@ -233,7 +236,6 @@ export default {
         }
       }
     });
-
     // 获取密钥对
     this.$electron.ipcRenderer.on('getKeyPaired',async (e, a) => {
       if(a.type === 'RSAUtil'){
@@ -307,7 +309,11 @@ export default {
         this.download(item, res)
       }
     });
-
+    // 实时监听剪切板事件
+    this.listenClipboardTimer();
+  },
+  destroyed() {
+    clearInterval(this.clipboardTimer)
   },
   filters: {
     realPath(i){
@@ -355,6 +361,27 @@ export default {
     }
   },
   methods: {
+    // 实时监听剪切板事件
+    listenClipboardTimer(){
+      this.clipboardTimer = setInterval(() => {
+        let originalUrl = clipboard.readText();
+        if(this.originalUrl !== originalUrl){
+          if(isBase64(originalUrl) && window.atob(originalUrl).includes(`${BASE_URL}/pre-download?fileId=`)){
+            // 获取剪切板内容
+            this.originalUrl = originalUrl;
+            this.$destroyAll();
+            this.$confirm({
+              key: 'listenClipboardTimer',
+              title: '检测到新的下载链接',
+              content: '有新的下载任务，是否立即下载？',
+              onOk:() =>{
+                this.addDownload()
+              },
+            });
+          }
+        }
+      }, 1000)
+    },
     // tab切换
     tabChange(v){
       // console.log(v, this.tabValue);
@@ -381,10 +408,27 @@ export default {
       }
       let arr = item.savePath.split('.');
       arr.pop();
-      remote.shell.openItem(arr.join('.'))
+      try {
+        let stats = fs.statSync(arr.join('.'));
+
+        remote.shell.openItem(arr.join('.'))
+      }catch (e) {
+        this.$message.warning({
+          key: 'noFIle',
+          content: '文件或目录不存在'
+        })
+      }
+
     },
     // 处理下载链接
     dealOriginalUrl(originalUrl){
+      if(!isBase64(originalUrl)){
+        return this.$message.warning({
+          key: 'errorTip',
+          content: '请输入纬领云盘合法下载链接'
+        })
+      }
+      originalUrl = window.atob(originalUrl);
       let {downloadList = []} = this;
       let item = downloadList.filter(i => i.originalUrl === originalUrl)[0];
       if(item){
@@ -401,7 +445,7 @@ export default {
           })
         }
       }
-      if(!originalUrl.includes('http://192.168.0.200:83/pre-download?fileId=')){
+      if(!originalUrl.includes(`${BASE_URL}/pre-download?fileId=`)){
         return this.$message.warning({
           key: 'errorTip',
           content: '请输入纬领云盘合法下载链接'
@@ -443,7 +487,7 @@ export default {
     // 获取用户信息
     async getUserInfo(Token){
       return new Promise((resolve, reject) => {
-        this.$http.get(`http://192.168.0.200:83/user`, {
+        this.$http.get(`${BASE_URL}/user`, {
           headers: {
             'Token': Token
           },
@@ -755,7 +799,8 @@ export default {
     // 初始化操作
     async init(){
       let originalUrl = clipboard.readText();
-      if(originalUrl.includes('http://192.168.0.200:83/pre-download?fileId=')){
+
+      if(isBase64(originalUrl) && window.atob(originalUrl).includes(`${BASE_URL}/pre-download?fileId=`)){
         // 获取剪切板内容
         this.originalUrl = originalUrl;
       }
