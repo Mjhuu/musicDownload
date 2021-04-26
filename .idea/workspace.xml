@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66a0e47-5334-4d1f-807b-00c12005e3fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.electron-vue/webpack.web.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.electron-vue/webpack.web.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/icons/256x256.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/icons/256x256.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/icons/icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/build/icons/icon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ipcMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ipcMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/common/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/views/home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/views/newWindow.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/views/news.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,6 +93,8 @@
       <workItem from="1617873726078" duration="175000" />
       <workItem from="1617874064130" duration="1288000" />
       <workItem from="1618474051475" duration="2399000" />
+      <workItem from="1619055355760" duration="761000" />
+      <workItem from="1619330212495" duration="1393000" />
     </task>
     <task id="LOCAL-00001" summary="路由模式下的新进程处理数据">
       <created>1616566979648</created>
@@ -125,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616566992331</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完善云盘客户端">
+      <created>1619055400640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619055400640</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,8 +126,21 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.nsh" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="路由模式下的新进程处理数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="路由模式下的新进程处理数据" />
+    <MESSAGE value="完善云盘客户端" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善云盘客户端" />
   </component>
 </project>
